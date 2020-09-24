@@ -1,0 +1,18 @@
+$white: #ffffff;
+$dark: #000000;
+$orange: #F47320;
+
+$colors: (
+    'white': $white,
+    'dark': $dark,
+    'orange': $orange
+);
+
+@each $color, $value in $colors {
+    .#{$color} {
+        color: $value;
+    }
+    .bg-#{$color} {
+        background-color: $value;
+    }
+}

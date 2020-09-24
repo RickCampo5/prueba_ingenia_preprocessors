@@ -1,0 +1,108 @@
+@mixin fontFaces($family, $name, $weight) {
+    @font-face {
+        font-family: $family;
+        src: url(../fonts/roboto/roboto-#{$name}-webfont.eot),
+        url(../fonts/roboto/roboto-#{$name}-webfont.svg),
+        url(../fonts/roboto/roboto-#{$name}-webfont.ttf),
+        url(../fonts/roboto/roboto-#{$name}-webfont.woff);
+        font-weight: $weight;
+    }
+}
+
+@mixin italicFontFaces($family, $name, $weight) {
+    @font-face {
+        font-family: $family;
+        src: url(../fonts/roboto/roboto-#{$name}italic-webfont.eot),
+        url(../fonts/roboto/roboto-#{$name}italic-webfont.svg),
+        url(../fonts/roboto/roboto-#{$name}italic-webfont.ttf),
+        url(../fonts/roboto/roboto-#{$name}italic-webfont.woff);
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+@mixin condensedFontFaces($family, $name, $weight) {
+    @font-face {
+        font-family: $family;
+        src: url(../fonts/roboto/robotocondensed-#{$name}-webfont.eot),
+        url(../fonts/roboto/robotocondensed-#{$name}-webfont.svg),
+        url(../fonts/roboto/robotocondensed-#{$name}-webfont.ttf),
+        url(../fonts/roboto/robotocondensed-#{$name}-webfont.woff);
+        font-weight: $weight;
+    }
+}
+
+@mixin condensedItalicFontFaces($family, $name, $weight) {
+    @font-face {
+        font-family: $family;
+        src: url(../fonts/roboto/robotocondensed-#{$name}italic-webfont.eot),
+        url(../fonts/roboto/robotocondensed-#{$name}italic-webfont.svg),
+        url(../fonts/roboto/robotocondensed-#{$name}italic-webfont.ttf),
+        url(../fonts/roboto/robotocondensed-#{$name}italic-webfont.woff);
+        font-weight: $weight;
+        font-style: italic;
+    }
+}
+
+$roboto-font: 'Roboto', sans-serif;
+$robotocondensed-font: 'RobotoCondensed', sans-serif;
+$montserrat-font: 'Montserrat';
+
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+@include fontFaces($roboto-font, 'thin', $thin);
+@include fontFaces($roboto-font, 'light', $light);
+@include fontFaces($roboto-font, 'regular', $regular);
+@include fontFaces($roboto-font, 'medium', $medium);
+@include fontFaces($roboto-font, 'bold', $bold);
+@include fontFaces($roboto-font, 'black', $black);
+
+@include italicFontFaces($roboto-font, 'thin', $thin);
+@include italicFontFaces($roboto-font, 'light', $light);
+@include italicFontFaces($roboto-font, 'regular', $regular);
+@include italicFontFaces($roboto-font, 'medium', $medium);
+@include italicFontFaces($roboto-font, 'bold', $bold);
+@include italicFontFaces($roboto-font, 'black', $black);
+
+@include condensedFontFaces($robotocondensed-font, 'light', $light);
+@include condensedFontFaces($robotocondensed-font, 'regular', $regular);
+@include condensedFontFaces($robotocondensed-font, 'bold', $bold);
+
+@include condensedItalicFontFaces($robotocondensed-font, 'light', $light);
+@include condensedItalicFontFaces($robotocondensed-font, 'regular', $regular);
+@include condensedItalicFontFaces($robotocondensed-font, 'bold', $bold);
+
+@font-face {
+    font-family: $montserrat-font;
+    src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+    font-weight: $regular;
+}
+
+@font-face {
+    font-family: $montserrat-font;
+    src: url(../fonts/montserrat/Montserrat-Bold.ttf);
+    font-weight: $bold;
+}
+
+$roboto-font-weights: (
+    'thin': $thin,
+    'light': $light,
+    'regular': $regular,
+    'medium': $medium,
+    'bold': $bold,
+    'black': $black,
+);
+
+@each $name, $value in $roboto-font-weights {
+    .#{$name}-meta {
+        font-family: $roboto-font;
+        font-weight: $value;
+        font-style: normal;
+    }
+}

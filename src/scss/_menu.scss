@@ -1,0 +1,14 @@
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: rgba(white, 0.3);
+}
+
+nav {
+  .links {
+    font-family: $robotocondensed-font !important;
+    font-weight: $regular;
+  }
+
+  .uk-navbar-nav>li.uk-active>a {
+    color: $orange
+  }
+}

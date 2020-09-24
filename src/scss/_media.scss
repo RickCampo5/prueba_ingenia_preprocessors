@@ -1,0 +1,9 @@
+$tablet: 992px;
+$phone: 576px;
+$laptop: 1200px;
+
+@mixin media-query($size) {
+    @media(max-width: $size) {
+        @content
+    }
+};
