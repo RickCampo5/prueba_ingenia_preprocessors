@@ -4,4 +4,19 @@
 @import 'media';
 @import 'reboot';
 @import 'menu';
+@import 'footer';
 @import 'index';
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+
+  &__top {
+    top: 0;
+  }
+
+  &__bottom {
+    bottom: 0
+  }
+}

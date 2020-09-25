@@ -1,0 +1,74 @@
+.contact {
+  .locations {
+    &-container {
+      background-size: cover;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &__mexico {
+        background-image: url(../img/bg/bg_mexico_city.png);
+        background-position: 96%;
+      }
+
+      &__usa {
+        background-image: url(../img/bg/bg_washington.png);
+      }
+    }
+
+    &-title {
+      color: white;
+      font-family: $roboto-font;
+      font-weight: $black;
+      font-size: 2.6em;
+    }
+
+    &-box {
+      background-color: white;
+      padding: 3%;
+      font-size: 0.9em;
+
+      &-street {
+        text-transform: uppercase;
+        font-weight: $medium;
+      }
+
+      &-address, &-address2 {
+        font-weight: $light;
+        color: gray
+      }
+
+      &-phone {
+        color: $orange;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  .banner {
+    padding: 5% 5% 3% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $orange;
+
+    p {
+      margin-bottom: 0;
+      color: white;
+    }
+
+    h4 {
+      color: white;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      font-size: 2.3em;
+      font-weight: $bold;
+    }
+  }
+} 

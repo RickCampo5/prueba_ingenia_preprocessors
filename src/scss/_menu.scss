@@ -1,5 +1,9 @@
 .uk-navbar-container:not(.uk-navbar-transparent) {
-  background: rgba(white, 0.3);
+  background: rgba(white, 0.7);
+}
+
+.uk-navbar-nav>li>a {
+  color: rgba(black, 0.8);
 }
 
 nav {
@@ -9,6 +13,6 @@ nav {
   }
 
   .uk-navbar-nav>li.uk-active>a {
-    color: $orange
+    color: $orange;
   }
 }

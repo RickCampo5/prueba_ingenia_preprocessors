@@ -1,0 +1,125 @@
+.footer {
+  background-color: rgba(gray, 0.3);
+  color: gray;
+  padding: 3%;
+
+  .register {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 5%;
+    margin-bottom: 3%;
+    font-size: 0.9em;
+  }
+
+  .location {
+    padding: 0% 5%;
+
+    &-container {
+      &-name {
+        text-transform: uppercase;
+        font-weight: $bold;
+
+        &-image {
+          display: inline-block;
+          width: 30px;
+          height: 15px;
+          background-size: cover;
+          margin-right: 3%;
+          
+          &__usa {
+            background-image: url(../img/icons/countrys.png);
+            background-position: 0px;
+          }
+
+          &__mexico {
+            background-image: url(../img/icons/countrys.png);
+            background-position: 100%;
+          }
+        }
+      }
+
+      &-address {
+        font-weight: $light;
+        font-size: 0.9em;
+      }
+
+      &-phone {
+        font-weight: $light;
+        font-size: 0.9em;
+        color: gray;
+      }
+
+      span, a {
+        width: 100%;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+
+  .links {
+    &-inpage {
+      font-size: 0.9em;
+    }
+
+    &-policy {
+      font-size: 0.8em;
+    }
+
+    &-social {
+      &-anchor {
+        display: block;
+        width: 33.5px;
+        height: 33px;
+        background-image: url('../img/btns/btns.png');
+
+        &__twitter {
+          background-position: -32.8px 0px;
+        }
+        &__facebook {
+          background-position: -66px 0px;
+        }
+        &__youtube {
+          background-position: -99px 0px;
+        }
+        &__linkedin {
+          background-position: 0.7px 0px;
+        }
+      }
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      li {
+        list-style: none;
+        border-right: 1px solid rgba(gray, 0.3);
+        padding-left: 2%;
+        padding-right: 2%;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &.noborder {
+          border-right: none;
+          padding: 0;
+          margin: 1%;
+        }
+
+        a {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

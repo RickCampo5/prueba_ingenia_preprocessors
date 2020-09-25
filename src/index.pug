@@ -7,5 +7,23 @@ block vars
   - var menu = "esp"
   
 block content
-  .index1(id="index1")
-    h3.ms9 Welcome you can start coding now! ⚡️
+  .contact
+    .locations(uk-grid class="uk-grid-collapse uk-child-width-expand@s uk-text-center")
+      .locations-container.locations-container__mexico
+        h3.locations-title Mexico City
+        .locations-box
+          span.locations-box-street Antole France 311
+          span.locations-box-address Polanco, Miguel Hidalgo
+          span.locations-box-address2 11560 México D.F.
+          a(href="#").locations-box-phone 50 22 09 00
+      .locations-container.locations-container__usa
+        h3.locations-title Washington D.C
+        .locations-box
+          span.locations-box-street 1200 18th street, NW
+          span.locations-box-address Suite 700 
+          span.locations-box-address2 Washington D.C. 20036 USA
+          a(href="#").locations-box-phone 50 22 09 00
+    .banner
+      p Ingenia is located in two major business & goverment hubs in the Americas
+      h4 Contact Us
+      p Send us an e-mail and we will get back to you 
