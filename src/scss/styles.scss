@@ -5,7 +5,81 @@
 @import 'reboot';
 @import 'menu';
 @import 'footer';
-@import 'index';
+
+button {
+  cursor: pointer;
+  background-color: $orange;
+  color: white;
+  padding: 1% 3%;
+  font-size: 1.1em;
+  border-style: none;
+  border-color: unset;
+  outline: none;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+input {
+  margin: 2%;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 1%;
+  background-color: transparent;
+  border-color: rgba(gray, 0.3);
+  color: rgba(gray, 1);v
+
+  &::placeholder {
+    color: rgba(gray, 0.5);
+    font-weight: $light;
+  }
+}
+
+textarea {
+  font-family: $roboto-font;
+  padding: 1%;
+  font-size: 1.1em;
+  color: rgba(gray, 1);
+  border-color: rgba(gray, 0.3);
+  width: 100%;
+}
+
+select {
+  background-color: white;
+  border: thin solid rgba(gray, 0.8);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+
+  &:focus {
+    outline: 0;
+  }
+}
 
 .fixed {
   position: fixed;
@@ -20,3 +94,5 @@
     bottom: 0
   }
 }
+
+@import 'index';

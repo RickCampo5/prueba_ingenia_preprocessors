@@ -27,3 +27,59 @@ block content
       p Ingenia is located in two major business & goverment hubs in the Americas
       h4 Contact Us
       p Send us an e-mail and we will get back to you 
+    .container
+      form.form(action="")
+        .form-name
+          img(src=require("./img/bg/bullet_1.png"), alt="")
+          input(type="text" name="name" placeholder="Name")
+          input(type="text" name="surname" placeholder="Last Name")
+        .form-contact
+          img(src=require("./img/bg/bullet_2.png"), alt="")
+          input(type="text" name="email" placeholder="E-mail")
+          input(type="text" name="phone" placeholder="Phone")
+          img(src=require("./img/bg/bullet_3.png"), alt="")
+          label.form-message-label(for="message") Tell us about your challenge or opportunity
+        .form-message
+          textarea(name="message", cols="30", rows="10")
+        .form-button
+          button(type="button") Send
+    .places
+      p.selector 
+        strong Coming to visit us? 
+        | Here are some of our favorite places around town to 
+        select#placesSelector(name="places")
+          option(value="read") A quiet place to read book
+      .places-container(uk-grid class="uk-grid-collapse uk-child-width-expand@s")
+        .places-container-country.places-container-country__mexico
+          p.places-container-country-title Mexico city:
+          .card
+            .card-name
+              span.card-name-span.card-name-span__mexico 
+                | Name of the place 
+                i.card-name-icon
+            span.card-address 123 Main St
+            p.card-desc amazing burguers, imprompteau jazz trios
+          .card
+            .card-name
+              span.card-name-span.card-name-span__mexico 
+                | Name of the place 
+                i.card-name-icon
+            span.card-address 123 Main St
+            p.card-desc amazing burguers, imprompteau jazz trios
+        .places-container-country.places-container-country__usa
+          p.places-container-country-title Washington D.C. :
+          .card
+            .card-name
+              span.card-name-span
+                i.card-name-icon
+                | Name of the place 
+            span.card-address 123 Main St
+            p.card-desc amazing burguers, imprompteau jazz trios
+          .card
+            .card-name
+              span.card-name-span
+                i.card-name-icon
+                | Name of the place 
+            span.card-address 123 Main St
+            p.card-desc amazing burguers, imprompteau jazz trios
+
