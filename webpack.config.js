@@ -22,7 +22,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "[name].bundle.js"
+    filename: "js/[name].bundle.js"
   },
   devServer: {
     port: 3000,
@@ -74,8 +74,7 @@ module.exports = {
         use: [{
               loader: 'file-loader',
               options: {
-                outputPath: 'images',
-                publicPath: '../images'
+                outputPath: 'css/images',
               }
           }]
       },
@@ -85,7 +84,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'fonts'
+              outputPath: 'css/fonts'
             }
           }
         ]
