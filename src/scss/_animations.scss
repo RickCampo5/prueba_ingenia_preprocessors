@@ -32,3 +32,19 @@
     transform: rotate(0);
   }
 }
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translate();
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
