@@ -15,3 +15,16 @@ block vars
             a.links(href="#") Contact
           li
             a.links(href="#") manifesto
+        a(uk-navbar-toggle-icon="" href="#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon")
+#offcanvas(uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas uk-offcanvas-overlay uk-open")
+  .mobile-menu(class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-push")
+    .uk-panel
+      ul(class="uk-nav uk-nav-default tm-nav")
+        li
+          a(href="#") About us
+        li
+          a(href="#") Our Work
+        li
+          a.active(href="#") Contact
+        li
+          a(href="#") Manifesto

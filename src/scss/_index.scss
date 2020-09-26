@@ -114,8 +114,19 @@
 
       .recaptcha {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        &-error {
+          color: rgba(red, 0.8);
+          font-size: 0.8em;
+          display: none;
+
+          &.show {
+            display: block;
+          }
+        }
       }
     }
 

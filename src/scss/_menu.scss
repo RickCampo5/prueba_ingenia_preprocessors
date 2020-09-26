@@ -16,3 +16,17 @@ nav {
     color: $orange;
   }
 }
+
+.mobile-menu {
+  background-color: rgb(250, 250, 250);
+
+  a {
+    color: rgba(gray, 0.8) !important;
+    font-size: 2em;
+    font-weight: $bold;
+
+    &.active {
+      color: $orange !important;
+    }
+  }
+}

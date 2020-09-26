@@ -116,25 +116,33 @@ function fatalErrorMessage() {
 function submitForm() {
   const form = document.getElementById('contactForm')
   const validInputs = validateAllInputs()
+  const response = grecaptcha.getResponse()
+  const recaptchaError = document.getElementById('recaptchaError')
 
-  if(validInputs) {
-    const url = 'http://ingenia.com/snippets/test/contact.php'
-    const name = getInputValue('nameInput')
-    const surname = getInputValue('surnameInput')
-    const data = new FormData(form)
-    data.append('fullname', `${name} ${surname}`)
+  if(response.length > 0) {
+    recaptchaError.classList.remove('show')
 
-    window.fetch(url, {
-      method: 'POST',
-      body: data
-    })
-    .then(response => {
-      console.log(response)
-    })
-    .catch(err => {
-      fatalErrorMessage()
-    })
-  } 
+    if(validInputs) {
+      const url = 'http://ingenia.com/snippets/test/contact.php'
+      const name = getInputValue('nameInput')
+      const surname = getInputValue('surnameInput')
+      const data = new FormData(form)
+      data.append('fullname', `${name} ${surname}`)
+  
+      window.fetch(url, {
+        method: 'POST',
+        body: data
+      })
+      .then(response => {
+        console.log(response)
+      })
+      .catch(err => {
+        fatalErrorMessage()
+      })
+    } 
+  } else {
+    recaptchaError.classList.add('show')
+  }
 }
 
 const submitButton = document.getElementById('submitButton')
