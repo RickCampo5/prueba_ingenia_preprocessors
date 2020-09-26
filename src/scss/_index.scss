@@ -84,6 +84,10 @@
 
     .form {
       width: 40%;
+      
+      &.disabled {
+        display: none;
+      }
 
       @media(max-width: $tablet) {
         width: 90%;
@@ -210,6 +214,58 @@
           font-weight: $light;
         }
       }
+    }
+  }
+
+  .fatal-error {
+    min-height: 40vh;
+    color: rgba(rgb(221, 57, 57), 1);
+    font-size: 2em;
+    padding: 3%;
+    font-weight: $bold;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &-span {
+      opacity: 0;
+      transform: translateY(20%);
+      transition: all 0.8s 1s;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &.show {
+      display: flex;
+    }
+  }
+
+  .success {
+    min-height: 40vh;
+    color: rgba($orange, 1);
+    font-size: 2em;
+    padding: 3%;
+    font-weight: $bold;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &-span {
+      opacity: 0;
+      transform: translateY(20%);
+      transition: all 0.8s 1s;
+
+      &.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &.show {
+      display: flex;
     }
   }
 } 

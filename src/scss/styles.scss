@@ -19,21 +19,47 @@ button {
   &:active {
     transform: scale(0.95);
   }
+
+  &:disabled {
+    background-color: rgba($orange, 0.5);
+    cursor: not-allowed;
+  }
 }
 
 input {
-  margin: 2%;
+  margin: 1% 2% 1% 2%;
   width: 100%;
   font-size: 1.1em;
   padding: 1%;
   background-color: transparent;
   border-color: rgba(gray, 0.3);
-  color: rgba(gray, 1);v
+  color: rgba(gray, 1);
 
-  &::placeholder {
-    color: rgba(gray, 0.5);
-    font-weight: $light;
+  &.error {
+    border-color: rgba(red, 0.5);
   }
+}
+
+::placeholder {
+  color: rgba(gray, 0.6);
+  font-weight: $light;
+}
+
+.error-message {
+  &-span {
+    font-size: 0.8em;
+    color: rgba(red, 0.5);
+    display: none;
+    margin-left: 10%;
+
+    &.mt-0 {
+      margin: 0
+    }
+
+    &.show {
+      display: inherit;
+    }
+  } 
 }
 
 textarea {
@@ -43,6 +69,10 @@ textarea {
   color: rgba(gray, 1);
   border-color: rgba(gray, 0.3);
   width: 100%;
+
+  &.error {
+    border-color: rgba(red, 0.5);
+  }
 }
 
 select {
@@ -79,6 +109,10 @@ select {
   &:focus {
     outline: 0;
   }
+}
+
+.mt-3 {
+  margin-top: 3%;
 }
 
 .fixed {

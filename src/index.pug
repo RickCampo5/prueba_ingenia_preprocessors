@@ -26,23 +26,40 @@ block content
     .banner
       p Ingenia is located in two major business & goverment hubs in the Americas
       h4 Contact Us
-      p Send us an e-mail and we will get back to you 
+      p Send us an e-mail and we will get back to you
+    .success
+      span.success-span Thanks, we'll get back at you as soon as possible.
+    .fatal-error
+      span.fatal-error-span There was an error please try again later :(
     .container
-      form.form(action="")
+      form#contactForm.form(action="")
         .form-name
+          .error-message(uk-grid class="uk-grid-collapse uk-child-width-expand")
+            div
+              span.error-message-span#nameError * Invalid name
+            div
+              span.error-message-span#surnameError * Invalid surname
           img(src=require("./img/bg/bullet_1.png"), alt="")
-          input(type="text" name="name" placeholder="Name")
-          input(type="text" name="surname" placeholder="Last Name")
+          input#nameInput(type="text" name="name" placeholder="Name")
+          input#surnameInput(type="text" name="surname" placeholder="Last Name")
         .form-contact
+          .error-message(uk-grid class="uk-grid-collapse uk-child-width-expand")
+            div
+              span.error-message-span#emailError * Invalid email
+            div
+              span.error-message-span#phoneError * Invalid phone number
           img(src=require("./img/bg/bullet_2.png"), alt="")
-          input(type="text" name="email" placeholder="E-mail")
-          input(type="text" name="phone" placeholder="Phone")
-          img(src=require("./img/bg/bullet_3.png"), alt="")
-          label.form-message-label(for="message") Tell us about your challenge or opportunity
+          input#emailInput(type="text" name="email" placeholder="E-mail")
+          input#phoneInput(type="text" name="phone" placeholder="Phone")
+          .mt-3
+            img(src=require("./img/bg/bullet_3.png"), alt="")
+            label.form-message-label(for="message") Tell us about your challenge or opportunity
         .form-message
-          textarea(name="message", cols="30", rows="10")
+          .error-message
+            span.mt-0.error-message-span#messageError * Please write a message 
+          textarea#messageInput(name="comment", cols="30", rows="10")
         .form-button
-          button(type="button") Send
+          button#submitButton(type="button") Send
     .places
       p.selector 
         strong Coming to visit us? 
